@@ -216,15 +216,18 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)setupPopView{
     
-    CGPoint point = CGPointMake(_addBtn.center.x,_addBtn.center.y + 45);
-    XTPopView *view1 = [[XTPopView alloc] initWithOrigin:point Width:130 Height:40 * 3 Type:XTTypeOfUpRight Color:[UIColor whiteColor] superView:self.view];
-    view1.dataArray = @[@"编辑",@"列表模式", @"本地传书"];
-    view1.images = @[@"bookShelfPopMenuedit",@"bookShelfPopMenulist", @"bookShelfPopMenuImport"];
-    view1.fontSize = 13;
-    view1.row_height = 40;
-    view1.titleTextColor = [UIColor blackColor];
-    view1.delegate = self;
-    [view1 popView];
+    UIWindow * window = [[[UIApplication sharedApplication] delegate] window];
+    CGRect rect = [_addBtn convertRect: _addBtn.bounds toView:window];
+    CGPoint point = CGPointMake(rect.origin.x + 20, rect.origin.y + 45);
+    
+    XTPopView *popView = [[XTPopView alloc] initWithOrigin:point Width:130 Height:40 * 3 Type:XTTypeOfUpRight Color:[UIColor whiteColor] superView:self.view];
+    popView.dataArray = @[@"编辑",@"列表模式", @"本地传书"];
+    popView.images = @[@"bookShelfPopMenuedit",@"bookShelfPopMenulist", @"bookShelfPopMenuImport"];
+    popView.fontSize = 13;
+    popView.row_height = 40;
+    popView.titleTextColor = [UIColor blackColor];
+    popView.delegate = self;
+    [popView popView];
 }
 - (void)hideAllDeleteBtn{
     if (!deleteBtnFlag) {

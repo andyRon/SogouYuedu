@@ -9,13 +9,14 @@
 #import "AppDelegate.h"
 #import <JVFloatingDrawerViewController.h>
 #import <JVFloatingDrawerSpringAnimator.h>
+#import "JPFPSStatus.h"
 
 static NSString * const StoryboardName = @"Main";
 
-static NSString * const YTLeftslideStoryboardID = @"LeftslideViewControllerStoryboardID";
-static NSString * const YTBookstoreStoryboardID = @"bookstoreStoryboardID";
-static NSString * const YTBookshelfStoryboardID = @"bookshelfStoryboardID";
-static NSString * const YTDiscoverStoryboardID = @"discoverStoryboardID";
+static NSString * const ARLeftslideStoryboardID = @"LeftslideViewControllerStoryboardID";
+static NSString * const ARBookstoreStoryboardID = @"bookstoreStoryboardID";
+static NSString * const ARBookshelfStoryboardID = @"bookshelfStoryboardID";
+static NSString * const ARDiscoverStoryboardID = @"discoverStoryboardID";
 
 
 @interface AppDelegate ()
@@ -37,6 +38,8 @@ static NSString * const YTDiscoverStoryboardID = @"discoverStoryboardID";
     [self configureDrawerViewController];
     
     [self.window makeKeyAndVisible];
+    
+    [[JPFPSStatus sharedInstance] open];
     
     return YES;
 }
@@ -82,7 +85,7 @@ static NSString * const YTDiscoverStoryboardID = @"discoverStoryboardID";
 
 - (UIViewController *)leftslideViewController {
     if (!_leftslideViewController) {
-        _leftslideViewController = [self.drawersStoryboard instantiateViewControllerWithIdentifier:YTLeftslideStoryboardID];
+        _leftslideViewController = [self.drawersStoryboard instantiateViewControllerWithIdentifier:ARLeftslideStoryboardID];
     }
     
     return _leftslideViewController;
@@ -94,7 +97,7 @@ static NSString * const YTDiscoverStoryboardID = @"discoverStoryboardID";
 
 - (UIViewController *)bookstoreViewController {
     if (!_bookstoreViewController) {
-        _bookstoreViewController = [self.drawersStoryboard instantiateViewControllerWithIdentifier:YTBookstoreStoryboardID];
+        _bookstoreViewController = [self.drawersStoryboard instantiateViewControllerWithIdentifier:ARBookstoreStoryboardID];
     }
     
     return _bookstoreViewController;
@@ -102,7 +105,7 @@ static NSString * const YTDiscoverStoryboardID = @"discoverStoryboardID";
 
 - (UIViewController *)discoverViewController {
     if (!_discoverViewController) {
-        _discoverViewController = [self.drawersStoryboard instantiateViewControllerWithIdentifier:YTDiscoverStoryboardID];
+        _discoverViewController = [self.drawersStoryboard instantiateViewControllerWithIdentifier:ARDiscoverStoryboardID];
     }
     
     return _discoverViewController;
@@ -110,7 +113,7 @@ static NSString * const YTDiscoverStoryboardID = @"discoverStoryboardID";
 
 - (UICollectionViewController *)bookshelfViewController {
     if (!_bookshelfViewController) {
-        _bookshelfViewController = [self.drawersStoryboard instantiateViewControllerWithIdentifier:YTBookshelfStoryboardID];
+        _bookshelfViewController = [self.drawersStoryboard instantiateViewControllerWithIdentifier:ARBookshelfStoryboardID];
     }
     
     return _bookshelfViewController;

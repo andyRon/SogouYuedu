@@ -68,15 +68,14 @@
     _hotSearchWords = @[@"完美世界",@"大主宰",@"雪鹰领主",@"龙王传说",@"校花的贴身高手",@"武炼巅峰",@"帝霸",@"超品相师",@"武逆",@"换一换" ];
     
     self.tableView.bounces = NO;
+    
+    [self setupNavBar];
+    [self setupFooter];
+    [self setupTableView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.resultArr.count;
 }
@@ -197,7 +196,8 @@
         weakSelf.searchContent = wSearchBar.text;
         [weakSelf.tableView reloadData]; // 时刻刷新界面
     };
-    self.searchBar.searchBarDidSearchBlock = ^{ // 搜索回调
+    // 搜索回调，直接在搜索框中输入搜索
+    self.searchBar.searchBarDidSearchBlock = ^{
         [MBProgressHUD showHUDAddedTo:weakSelf.view animated:YES];
         
         weakSelf.tableView.tableHeaderView = nil;
@@ -219,7 +219,7 @@
 
     };
 }
-#pragma mark - 设置按钮的词以及点击回调
+#pragma mark - 设置热门词汇按钮的词以及点击回调
 - (void)setupFooter{
     ARSearchFooter *footer = [[ARSearchFooter alloc] initWithFrame:CGRectMake(0, 0, ARScreenWidth, 270)];
     footer.hidden = self.searchContent.length;

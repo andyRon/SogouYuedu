@@ -33,7 +33,7 @@
 /**
  @brief 弹窗
  @param title 弹窗标题
- message 弹窗信息
+ @param message 弹窗信息
  */
 + (void) showAlertView: (NSString*) title andMessage: (NSString *) message;
 

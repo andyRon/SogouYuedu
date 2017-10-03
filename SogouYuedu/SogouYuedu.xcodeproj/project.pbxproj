@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		91E46A62AF2B54D6C9CA91B0 /* libPods-SogouYuedu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD520F640B722B6BADE2BF3C /* libPods-SogouYuedu.a */; };
+		EF0F13111F7D21260046A762 /* JPFPSStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0F13101F7D21250046A762 /* JPFPSStatus.m */; };
 		EF61E6C51F79557F00039F5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF61E6C41F79557F00039F5E /* AppDelegate.m */; };
 		EF61E6C81F79557F00039F5E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF61E6C71F79557F00039F5E /* ViewController.m */; };
 		EF61E6CB1F79557F00039F5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF61E6C91F79557F00039F5E /* Main.storyboard */; };
@@ -61,6 +62,8 @@
 		2C45EC95AA501D9A9A2F511D /* Pods-SogouYuedu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SogouYuedu.release.xcconfig"; path = "Pods/Target Support Files/Pods-SogouYuedu/Pods-SogouYuedu.release.xcconfig"; sourceTree = "<group>"; };
 		BD520F640B722B6BADE2BF3C /* libPods-SogouYuedu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SogouYuedu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB94E37C5E8B54D23BC672E /* Pods-SogouYuedu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SogouYuedu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SogouYuedu/Pods-SogouYuedu.debug.xcconfig"; sourceTree = "<group>"; };
+		EF0F130F1F7D21250046A762 /* JPFPSStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPFPSStatus.h; sourceTree = "<group>"; };
+		EF0F13101F7D21250046A762 /* JPFPSStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPFPSStatus.m; sourceTree = "<group>"; };
 		EF61E6C01F79557F00039F5E /* SogouYuedu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SogouYuedu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF61E6C31F79557F00039F5E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EF61E6C41F79557F00039F5E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -183,6 +186,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EF0F130E1F7D21250046A762 /* JPFPSStatus */ = {
+			isa = PBXGroup;
+			children = (
+				EF0F130F1F7D21250046A762 /* JPFPSStatus.h */,
+				EF0F13101F7D21250046A762 /* JPFPSStatus.m */,
+			);
+			path = JPFPSStatus;
+			sourceTree = "<group>";
+		};
 		EF61E6B71F79557F00039F5E = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +216,7 @@
 		EF61E6C21F79557F00039F5E /* SogouYuedu */ = {
 			isa = PBXGroup;
 			children = (
+				EF0F130E1F7D21250046A762 /* JPFPSStatus */,
 				EF61E6C31F79557F00039F5E /* AppDelegate.h */,
 				EF61E6C41F79557F00039F5E /* AppDelegate.m */,
 				EF61E6C61F79557F00039F5E /* ViewController.h */,
@@ -610,6 +623,7 @@
 				EF61E6F01F7969A300039F5E /* ARResultCellWithbkey.m in Sources */,
 				EF61E6E31F7967C800039F5E /* ARSearchBar.m in Sources */,
 				EF61E6C81F79557F00039F5E /* ViewController.m in Sources */,
+				EF0F13111F7D21260046A762 /* JPFPSStatus.m in Sources */,
 				EF61E7661F7AC16400039F5E /* ARTabBarController.m in Sources */,
 				EF61E7591F7AB99900039F5E /* PCPageCell.m in Sources */,
 				EF61E71E1F798AE300039F5E /* ARDetailNobkeyViewController.m in Sources */,

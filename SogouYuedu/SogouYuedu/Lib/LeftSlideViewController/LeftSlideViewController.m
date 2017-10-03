@@ -17,6 +17,7 @@
 @property (nonatomic,strong) UITableView *leftTableview;
 @property (nonatomic,assign) CGFloat leftTableviewW;
 @property (nonatomic,strong) UIView *contentView;
+
 @end
 
 

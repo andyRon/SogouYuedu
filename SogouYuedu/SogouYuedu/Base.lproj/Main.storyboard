@@ -282,6 +282,7 @@
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="bookShelfSearchBtn" id="6n4-1Z-QoO">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="searchBtnClick:" destination="UF1-zC-f6A" id="IS1-ie-cb9"/>
                             </connections>
@@ -381,8 +382,10 @@
                                         <action selector="addBtnClick:" destination="zgg-CB-xb7" eventType="touchUpInside" id="RaH-Jr-OgK"/>
                                     </connections>
                                 </button>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </barButtonItem>
                             <barButtonItem image="bookShelfSearchBtn" id="wcM-0W-cAS">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="searchBtnClick:" destination="zgg-CB-xb7" id="Pon-ch-hWe"/>
                                 </connections>
@@ -404,13 +407,40 @@
                     <view key="view" contentMode="scaleToFill" id="b6v-2F-ApC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="752-wU-NFK">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vb-3k-t1P">
+                                <rect key="frame" x="0.0" y="0.0" width="275" height="160"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="personalCenter_avatar_boy" translatesAutoresizingMaskIntoConstraints="NO" id="tSx-TO-fCo">
+                                        <rect key="frame" x="8" y="98" width="57" height="54"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="r5d-Ka-ujd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F2Y-Lv-6YM" firstAttribute="bottom" secondItem="752-wU-NFK" secondAttribute="bottom" id="8dk-E6-tUf"/>
+                            <constraint firstItem="F2Y-Lv-6YM" firstAttribute="trailing" secondItem="752-wU-NFK" secondAttribute="trailing" id="DFB-p2-D8Y"/>
+                            <constraint firstItem="752-wU-NFK" firstAttribute="top" secondItem="F2Y-Lv-6YM" secondAttribute="top" id="LKp-wI-kNY"/>
+                            <constraint firstItem="7vb-3k-t1P" firstAttribute="leading" secondItem="F2Y-Lv-6YM" secondAttribute="leading" id="SZ3-4X-elx"/>
+                            <constraint firstItem="F2Y-Lv-6YM" firstAttribute="trailing" secondItem="7vb-3k-t1P" secondAttribute="trailing" constant="100" id="ZJ1-IN-ILU"/>
+                            <constraint firstItem="752-wU-NFK" firstAttribute="leading" secondItem="F2Y-Lv-6YM" secondAttribute="leading" id="gUE-Pg-wnj"/>
+                            <constraint firstItem="7vb-3k-t1P" firstAttribute="top" secondItem="b6v-2F-ApC" secondAttribute="top" id="qfN-SB-CRe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="F2Y-Lv-6YM"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCs-Ct-Wg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1820" y="110"/>
+            <point key="canvasLocation" x="1820" y="109.29535232383809"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kcx-ih-nTW">
